@@ -1,0 +1,13 @@
+<div class="center jumbotron">
+  <% if logged_in? %>
+  <h2>Voici la reponse de l'univers !!</h2>
+   <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/200w.gif" alt="blinking guy gif"> 
+  <% else %>
+  <h1>Decouvre les srecrets de l'univers</h1>
+  <h3>
+    Inscris-toi pour les decouvrir !
+  </h3>
+  <p><%= link_to "Sign up", new_user_path,class: "btn btn-lg btn-primary" %></p>
+    <p>Deja inscrit ? <%= link_to "Log in", '/login' %></p>
+ <% end %>
+</div>
