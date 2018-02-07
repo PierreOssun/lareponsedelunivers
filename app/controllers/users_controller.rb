@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
   def index
    @user = User.all
   end
@@ -34,6 +35,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     redirect_to @user
+  end
+
+  def secret
+    unless logged_in?
+      flash.now[:danger] = "Tu doit etre Log in pour voir cette page"
+      redirect_to home_path
+    end
   end
 
   private

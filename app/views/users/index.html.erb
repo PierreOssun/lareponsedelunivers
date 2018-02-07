@@ -1,9 +1,9 @@
 <div class="center jumbotron">
   <% if logged_in? %>
-  <h2>Voici la reponse de l'univers !!</h2>
-   <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/200w.gif" alt="blinking guy gif"> 
+  <h2>Clique ici pour voir la reponse de l'univers</h2>
+   <%= link_to "THE SECRET", '/secret' %></p>
   <% else %>
-  <h1>Decouvre les srecrets de l'univers</h1>
+  <h1>Decouvre les secrets de l'univers</h1>
   <h3>
     Inscris-toi pour les decouvrir !
   </h3>
